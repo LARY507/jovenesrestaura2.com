@@ -1,0 +1,83 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+main {
+    padding-top: 80px; /* Ajuste para evitar superposición con el header */
+}
+
+section#departamentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.departamento {
+    width: calc(50% - 20px); /* Ajuste para dos columnas en dispositivos grandes */
+    max-width: 300px; /* Ancho máximo de cada cuadro */
+    height: 300px; /* Altura fija de cada cuadro */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.departamento:hover {
+    transform: translateY(-5px);
+}
+
+.departamento .texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    .departamento {
+        width: 100%; /* Ocupa toda la pantalla en dispositivos móviles */
+    }
+}
